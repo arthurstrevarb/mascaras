@@ -45,10 +45,11 @@
             Msk_TextBox.Font = new Font("Arial", 12F, FontStyle.Bold);
             Msk_TextBox.Location = new Point(23, 31);
             Msk_TextBox.Name = "Msk_TextBox";
-            Msk_TextBox.PasswordChar = '•';
             Msk_TextBox.Size = new Size(258, 26);
             Msk_TextBox.TabIndex = 0;
             Msk_TextBox.MaskInputRejected += Msk_TextBox_MaskInputRejected;
+            Msk_TextBox.KeyPress += Msk_TextBox_KeyPress;
+            Msk_TextBox.Validating += Msk_TextBox_Validating;
             // 
             // Lbl_Conteudo
             // 
@@ -116,6 +117,7 @@
             Btn_Senha.TabIndex = 7;
             Btn_Senha.Text = "Senha";
             Btn_Senha.UseVisualStyleBackColor = true;
+            Btn_Senha.Click += Btn_Senha_Click;
             // 
             // Btn_Telefone
             // 
